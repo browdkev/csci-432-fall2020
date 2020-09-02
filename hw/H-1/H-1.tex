@@ -1,11 +1,12 @@
 \documentclass{article}
 \usepackage{../fasy-hw}
 \usepackage{ wasysym }
+\usepackage{proof}
 
 %% UPDATE these variables:
 \renewcommand{\hwnum}{1}
 \title{Advanced Algorithms, Homework 1}
-\author{TODO-Your Name Here}
+\author{Kevin Browder}
 \collab{n/a}
 \date{due: 27 August 2020}
 
@@ -27,25 +28,32 @@ General homework expectations:
 
 Answer the following questions:
 \begin{enumerate}
-    \item What is your elevator pitch?  Describe yourself in 1-2
-                sentences.
-    \item What was your favorite CS class so far, and why?
-    \item What was your least favorite CS class so far, and why?
-    \item Why are you interested in taking this course?
+    \item What is your elevator pitch? 
+    \item What was your favorite CS class so far, and why? 
+    \item What was your least favorite CS class so far, and why? 
+    \item Why are you interested in taking this course? 
     \item What is your biggest academic or research goal for this semester (can
-        be related to this course or not)?
-    \item What do you want to do after you graduate?
+        be related to this course or not)? 
+    \item What do you want to do after you graduate? 
     \item What was the most challenging aspect of your coursework last semester
-        after the university transitioned to online?
+        after the university transitioned to online? 
     \item What went well last semester for you after the university transitioned
-        to online?
+        to online? 
 \end{enumerate}
 
 \paragraph{Answer}
 
 % ============================================
 
-TODO: your answer goes between these lines
+\begin{enumerate}
+	\item I am 22 years old and grew up in the Bitteroot and Hailey, Idaho. I am a computer science major and like to run, climb and ski. 
+	\item My favorite CS class so far was ESOF 322 with Clem.
+	\item My least favorite CS class so far was Programming Languages.
+	\item I am looking forward to integrating a TensorFlow model into a mobile app for YERC. 
+	\item Play in the mountains and hopefully move to New Zealand/Australia.
+	\item My motivation was at an all time low. 
+	\item I enjoyed spending time with my family.
+\end{enumerate}
 
 % ============================================
 
@@ -65,7 +73,7 @@ Please do the following:
 
 % ============================================
 
-TODO: write a statement confirming you have completed these tasks.
+I did the tasks.
 
 % ============================================
 
@@ -91,7 +99,7 @@ TODO: write a statement confirming you have completed these tasks.
 
 % ============================================
 
-TODO: your answer goes between these lines
+I have TAed for first year classes for 3 semesters now and had some instances of cheating. I had one instance where a student copy and pasted out of Stack Overflow right in front of me. I get looking at other code to get inspiration or ideas but copy and pasting right in front of the teacher is a bit over the top. It was very annoying. 
 
 % ============================================
 
@@ -105,7 +113,17 @@ exactly $n-1$ edges.
 
 % ============================================
 
-TODO: your answer goes between these lines
+\begin{proof}
+	By Induction. Let n be the number of vertices in a tree (T). \\
+	Now we will use Induction to prove this is true for all $n$.\\
+	Base Case: n=1 will have 0 edges this is true. \\
+	Now we will assume this holds true for $T$ with $n$ edges. \\ 
+	We will now prove this holds true for $n=m+1$. \\
+	The number of edges is m-1 + number of edges required to add 1 node by the inductive assumption. 
+	The number of edges to add a node is 1 by the definition of a tree. Each node must be connected and the graph must be acyclic. This means that you must add one edge when a node is added.
+	Therefore by induction a tree with one or more nodes has exactly $n-1$ edges. 
+	
+\end{proof}
 
 % ============================================
 
@@ -119,7 +137,10 @@ $O(n^2)$.
 
 % ============================================
 
-TODO: your answer goes between these lines
+\begin{proof}
+	By the definition of Big-), $f(x)$ is $O(n^2)$ if $f(x) \leq c*n^2$ fro some $n \geq n_0$. Let us check this condition: if $n^2 + 3n + 2 \leq c*n^3$ then $1 + \cfrac{3}{n} + \cfrac{2}{n^2} \leq c$. Therefore, the Big-O condition holds for $n\geq n_0 = 1$ and $c \geq 6 = (1 + 3 + 2)$. Larger values of $n_0$ will result in smaller factors c but the statement has been proved. 
+	
+\end{proof}
 
 % ============================================
 
@@ -138,7 +159,10 @@ Consider the \textsc{RightAngle} algorithm on page 8 of the textbook.
 
 % ============================================
 
-TODO: your answer goes between these lines
+\begin{enumerate}
+	\item Given a line $l$ and point $P$, the algorithm constructs a new line $l_n$ that is perpendicular to $l$ and passed through point $P$. 
+	\item The \textsc{RightAngle} algorithm does not contain a loop or recursion. It is a simple linear program so as long as the CIRCLE and INTERSECT methods terminate then the algorithm will terminate. It must terminate because it cannot do anything else. 
+\end{enumerate}
 
 % ============================================
 
@@ -148,10 +172,10 @@ TODO: your answer goes between these lines
 Consider the following statement: If $a$ and $b$ are both even numbers, then $ab$ is
 an even number.
 \begin{enumerate}
-    \item What is the definition of an odd number?
-    \item What is the definition of an even number?
-    \item What is the contrapositive of this statement?
-    \item What is the converse of this statement?
+    \item What is the definition of an odd number? 
+    \item What is the definition of an even number?  
+    \item What is the contrapositive of this statement? 
+    \item What is the converse of this statement? 
     \item Prove this statement.
 \end{enumerate}
 
@@ -159,7 +183,15 @@ an even number.
 
 % ============================================
 
-TODO: your answer goes between these lines.  Be sure to enumerate!
+\begin{enumerate}
+	\item Odd Number: n is odd if $n = 2k+1$ where $k$ is an integer.
+	\item Even Number: n is even if $n = 2k$ where $k$ is an integer.
+	\item If $ab$ is an odd number, than $a$ and $b$ are both odd.
+	\item If $ab$ is an even number, then $a$ and $b$ are both even number. 
+	\item 
+	\begin{proof}Since $a$ and $b$ are even they can be rewritten as $a = 2m$ and $b = 2n$.\\ So, $ab = 2m(2n) = 2(2mn)$ which is even by the definition of an even number.
+	\end{proof} 
+\end{enumerate}
 
 % ============================================
 

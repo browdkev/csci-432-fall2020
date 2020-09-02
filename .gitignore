@@ -1,1 +1,5 @@
 hw/H-*/H-*.pdf
+hw/H-*/H-*.aux
+hw/H-*/H-*.log
+hw/H-*/H-*.out
+hw/H-*/H-*.synctex.gz
